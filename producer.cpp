@@ -163,7 +163,7 @@ Producer::populateStore(std::string fileNameO)
 	// std::cerr << " num interest: " << numInterest << std::endl;
 	BOOST_ASSERT(m_store.size() == 0);
 
-	std::string fileName = "/cvmfs/cms.cern.ch/data/" + fileNameO;  
+	std::string fileName = fileNameO;  
 	if (m_isVerbose)
 		std::cerr << "Loading input ..." << std::endl;
 
@@ -202,7 +202,7 @@ Producer::populateStore(std::string fileNameO)
 		//  data->setFreshnessPeriod(m_freshnessPeriod);
 		//  m_store.push_back(data);
 
-		fileName = "/cvmfs/cms.cern.ch/data/" + fileNameO + "P";
+		fileName =  fileNameO ;
 		std::fstream is(fileName);
 
 		if(is)
@@ -234,7 +234,7 @@ Producer::populateStore(std::string fileNameO)
 
 		if(m_store.empty())
 		{
-			fileName = "/cvmfs/cms.cern.ch/data/" + fileNameO + "C";
+			fileName =  fileNameO ;
 			std::fstream is(fileName);
 
 			if(is)

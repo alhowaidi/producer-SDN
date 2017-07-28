@@ -38,7 +38,7 @@ main(int argc, char** argv)
   std::string programName = argv[0];
   uint64_t freshnessPeriod = 10000;
   bool printVersion = false;
-  size_t maxChunkSize = MAX_NDN_PACKET_SIZE -1000;
+  size_t maxChunkSize = MAX_NDN_PACKET_SIZE -1000; //>>1;//>> 1;//-1000;
 std::cout << maxChunkSize << std::endl;  
 std::string signingStr;
   bool isVerbose = false;
